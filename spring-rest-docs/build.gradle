@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.spring.auto.rest.docs'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'javax.validation:validation-api:2.0.0.Final'
+    implementation 'org.hibernate.validator:hibernate-validator:6.0.9.Final'
+    implementation "org.springframework.restdocs:spring-restdocs-core:2.0.5.RELEASE"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.11.1'
+    testImplementation 'org.javamoney:moneta:1.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}

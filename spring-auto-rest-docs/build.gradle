@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.spring.auto.rest.docs'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "capital.scalable:spring-auto-restdocs-core:2.0.10"
+    implementation "org.springframework:spring-test:5.2.5.RELEASE"
+    implementation "org.springframework.restdocs:spring-restdocs-core:2.0.5.RELEASE"
+    implementation project(':spring-rest-docs')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
